@@ -1,0 +1,108 @@
+.selection {
+    position: relative;
+    width: 60%;
+    height: 350px;
+    margin: auto auto 20em auto;
+    text-align: center;
+}
+
+.selection__subtitle {
+    color: #f35f24;
+    font-size: 26px;
+}
+
+.selection__title {
+    color: #fff;
+    font-size: 26px;
+    margin: 1em 0 2em 0;
+}
+
+.carousel-content {
+    position: relative;
+    overflow: hidden;
+    transition: width .4s;
+    text-align: left;
+    height: 100%;
+}
+
+.slide {
+    height: 100%;
+    position: absolute;
+    transition: left .4s cubic-bezier(.47, .13, .15, .89);
+    background-image: url("../images/temp.jpg");
+}
+
+.slide:nth-child(odd) {
+    margin-left: 1em;
+}
+
+.slide:nth-child(even) {
+    margin-right: 1em;
+}
+
+.selection__item {
+    height: 100%;
+    width: 60%;
+    padding: 0 5px;
+    position: absolute;
+    right: 0;
+    background-color: rgba(150, 150, 150, .9);
+}
+
+.selection__content {
+    height: 100%;
+    display: flex;
+    padding: 1em 1em 0 1em;
+    flex-direction: column;
+    justify-content: last baseline;
+}
+
+.selection__content_title {
+    color: #e84012;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.selection__content_text {
+    padding: 0 15px 0 0;
+    margin: 1em 0 2em 0;
+}
+.selection__content_btn > button {
+    padding: 3px 9px;
+    color: #fff;
+    background-color: #f35f24;
+    border: none;
+    text-transform: uppercase;
+
+}
+.selection__content_btn > button:hover {
+    background-color: #e94f12;
+}
+
+.nav_btn {
+    position: absolute;
+    margin-top: -10px;
+    background-color: rgba(150, 150, 150, .3);
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    padding: 10px 10px;
+    cursor: pointer;
+    color: white;
+    transition: 120ms;
+}
+
+.nav_btn:hover {
+    background-color: #f35f24;
+    transition: 250ms;
+}
+
+.nav-left {
+    left: 45%;
+    bottom: -15em;
+}
+
+.nav-right {
+    right: 43%;
+    bottom: -15em;
+}
