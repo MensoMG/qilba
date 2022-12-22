@@ -43,7 +43,7 @@ h6 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("../images/intro_background.jpg");
+    background-image: url("/images/intro_background.jpg");
     background-size: cover;
     margin-bottom: 30px;
 }
@@ -104,7 +104,13 @@ h6 {
     color: #fff;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 3vh 0;
+}
+
+.logo {
+    margin-left: 35px;
 }
 
 /* Nav */
@@ -124,7 +130,9 @@ h6 {
     transition: color 0.2s linear;
 }
 
-.nav__link:hover {}
+.nav__link:hover {
+    color: #f35f24;
+}
 
 
 #carousel {
@@ -160,7 +168,7 @@ h6 {
     user-select: none;
 }
 
-#carousel #carousel_btn .btn {
+#carousel #carousel_btn .myform-btn {
     width: 45px;
     height: 45px;
     line-height: 40px;
@@ -176,9 +184,10 @@ h6 {
     transition: all 0.3s;
 }
 
-#carousel #carousel_btn .btn:hover {
+#carousel #carousel_btn .myform-btn:hover {
     color: #ffffff;
     background-color: #2f2f2f;
+
 }
 
 #carousel #carousel_btn>div:first-child {
@@ -213,6 +222,7 @@ h6 {
 }
 
 .catalog__card {
+    font-size: 16px;
     width: 230px;
     height: 240px;
     padding: 15px 5px;
@@ -228,7 +238,7 @@ h6 {
 }
 
 .card__image {
-    background-image: url("../images/icon.svg");
+    background-image: url("/images/icon.svg");
     width: 40px;
     height: 40px;
 
@@ -270,51 +280,128 @@ h6 {
 }
 
 .rate__body_item {
-    padding: 30px;
-    width: 100%;
-}
-
-.rate__body_title {}
-
-.rate__body_price {}
-
-.rate__body_describ {}
-
-.rate__body_btn {}
-
-
-/* суды форму обратной связи */
-
-
-/* Works */
-.works {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    margin: 0 1em;
+    width: 100%;
+    border: 2px #fff solid;
+    border-radius: 10px;
 }
 
-.works__item {
-    width: 25%;
-    height: 350px;
-    position: relative;
-    overflow: hidden;
-    /* border-bottom: 1px solid black; */
-    border-right: 1px solid black;
+.rate__body_title {
+    color: #f34f0f;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
-.works__photo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    transform: translate3d(-50%, -50%,
-            0);
+.rate__body_price {
+    font-size: 30px;
+    font-weight: 900;
+}
 
+.rate__body_price::after {
+    width: 100%;
+    height: 2px;
+    background-color: #f34f0f;
+}
+
+.rate__body_describ {
+    font-size: 18px;
+}
+
+.rate__body_btn>button {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    background-color: #f34f0f;
+    border: none;
+    margin-top: 0.7em;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+}
+
+/* ---------------------- */
+
+.feedback {
+    margin: 5em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback-header {
+    color: #f34f0f;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.feedback-header > div:first-child {
+    font-size: 21px;
+}
+
+.feedback-header > div:last-child {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.feedback-form {
+    min-width: 450px;
+    border-radius: 5px;
+}
+
+.feedback-form .input_field {
+    margin-bottom: 10px;
+    color: #000;
+}
+.input_field > input:target {
+    border: 2px #ff0008 solid;
+}
+
+.feedback-form .input_field input[type="text"],
+.feedback-form textarea {
+    border: 3px solid #e85517;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
+.feedback-form textarea {
+    resize: none;
+    height: 150px;
+}
+
+.feedback-form .myform-btn input[type="submit"] {
+    border: none;
+    margin-top: 15px;
+    padding: 0.8em 2em;
+    text-align: center;
+    width: 100%;
+    background: #f34f0f;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#error_message {
+    margin-bottom: 20px;
+    background: #ff0008;
+    padding: 0px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.5s ease;
 }
 
 /* REVIEWS PAGE */
 .review__header {
     position: relative;
-    background-image: url("../images/temp.jpg");
+    background-image: url("/images/temp.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -398,7 +485,7 @@ h6 {
 }
 
 .book-img {
-    background-image: url("../images/best-b.jpg");
+    background-image: url("/images/best-b.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -440,6 +527,7 @@ h6 {
     font-family: Neucha, sans-serif;
     font-size: 34px;
     font-weight: 400;
+    margin: 1em 0;
 }
 
 .best-authors__box {
@@ -476,14 +564,14 @@ h6 {
     margin: 3em 0;
 }
 
-.blog-news__header > div:first-child {
+.blog-news__header>div:first-child {
     font-family: Neucha, sans-serif;
     font-size: 36px;
     font-weight: 400;
 }
 
-.blog-news__header > div:last-child {
-
+.blog-news__header>div:last-child {
+    font-size: 18px;
 }
 
 .blog-news__content {
@@ -498,7 +586,7 @@ h6 {
 }
 
 .blog-news__item_img {
-    background-image: url("../images/blog-img.jpg");
+    background-image: url("/images/blog-img.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -510,7 +598,7 @@ h6 {
     font-size: 21px;
     font-weight: bold;
     margin: 1em 0;
-    
+
 }
 
 .blog-news__item_text {
@@ -519,6 +607,54 @@ h6 {
 
 
 /* ------------- */
+
+/* Книжный клуб */
+
+
+
+
+
+/* ---------------- */
+
+/* About us */
+.about {
+    display: flex;
+    flex-direction: column;
+}
+.about-top  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5em 0;
+}
+.about-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.about-top__img {
+    background-image: url("/images/temp.jpg");
+    height: 500px;
+    width: 400px;
+}
+.about-top__text {
+    max-width: 38%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-top__text > div {
+    font-size: 21px;
+    font-weight: bold;
+
+}
+.about-top__text > p {
+    font-size: 18px;
+    margin: 1em 0;
+}
+
+
+/* ------------------ */
 
 /* footer */
 
@@ -538,6 +674,7 @@ h6 {
 .social-icon,
 .social-icon__item,
 .social-icon__link {
+    padding-left: 0;
     font-size: 2rem;
     color: #fff;
     margin: 0 10px;
@@ -550,20 +687,8 @@ h6 {
 }
 
 .social-icon__link:hover {
-    transform: translateY(-10px);
-}
-
-.social-icon__link:nth-child(1):hover {
-    color: #000000;
-}
-.social-icon__link:nth-child(2):hover {
-    color: #0ff30f;
-}
-.social-icon__link:nth-child(3):hover {
-    color: #f30f0f;
-}
-.social-icon__link:nth-child(4):hover {
-    color: #00ffd9;
+    transform: translateY(-5px);
+    color: #000;
 }
 
 
@@ -580,7 +705,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 100px;
-    background: url("https://i.ibb.co/wNVPrst/wave.png");
+    background: url("/images/wave.png");
     background-size: 1000px 100px;
 }
 
@@ -609,7 +734,7 @@ h6 {
     z-index: 999;
     opacity: 0.7;
     bottom: 20px;
-    animation: animate 3s linear infinite;
+    animation: animate 5s linear infinite;
 }
 
 @keyframes animateWaves {

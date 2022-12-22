@@ -3,17 +3,16 @@ class MyHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <header class="header">
-                <div class="Sel">
-                    <div class="container">
-                        <div class="header__inner">
-                            <nav class="nav">
-                                <a class="nav__link" href="/index.html">Главная</a>
-                                <a class="nav__link" href="/pages/contact.html">Книжный Клуб</a>
-                                <a class="nav__link" href="/pages/work.html">VayTalks</a>
-                                <a class="nav__link" href="/pages/reviews.html">Рецензии</a>
-                                <a class="nav__link" href="/pages/about.html">About us</a>
-                            </nav>
-                        </div>
+                <div class="container">
+                    <div class="header__inner">
+                        <img class="logo" src="/images/logo.png" alt="" height="64px" width="64px">
+                        <nav class="nav">
+                            <a class="nav__link" href="/index.html">Главная</a>
+                            <a class="nav__link" href="/pages/book-club.html">Книжный Клуб</a>
+                            <a class="nav__link" href="/pages/vaytalks.html">VayTalks</a>
+                            <a class="nav__link" href="/pages/reviews.html">Рецензии</a>
+                            <a class="nav__link" href="/pages/about.html">About us</a>
+                        </nav>
                     </div>
                 </div>
             </header>

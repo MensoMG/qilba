@@ -166,22 +166,89 @@
                         <div class="rate__body_price">4999₽</div>
                         <div class="rate__body_describ">Все подборки разом по выгодной цене</div>
                         <div class="rate__body_btn"><button>купить абонемент</button></div>
-                    </div>
+                    </div>ё
                 </div>
             </div>
             <div class="feedback">
-
+                <div class="feedback-header">
+                    <div>ОСТАЛИСЬ ВОПРОСЫ?</div>
+                    <div>СВЯЖИТЕСЬ С НАМИ!</div>
+                </div>
+                <div class="feedback-form">
+                    <div id="error_message"></div>
+                    <form id="myform" onsubmit="return validate();">
+                        <div class="input_field">
+                            <input type="text" placeholder="Имя" id="fname">
+                        </div>
+                        <div class="input_field">
+                            <input type="text" placeholder="Фамилия" id="lname">
+                        </div>
+                        <div class="input_field">
+                            <input type="text" placeholder="Номер" id="phone">
+                        </div>
+                        <div class="input_field">
+                            <input type="text" placeholder="Email" id="email">
+                        </div>
+                        <div class="input_field">
+                            <textarea placeholder="Комментарий" id="yourfeedback"></textarea>
+                        </div>
+                        <div class="myform-btn">
+                            <input type="submit" value="Отправить">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
+
     </main>
     <footer-template></footer-template>
 
+    <script>
+        function validate() {
+            var firstname = document.getElementById("fname").value;
+            var lastname = document.getElementById("lname").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var yourfeedback = document.getElementById("yourfeedback").value;
+            var error_message = document.getElementById("error_message");
+
+            error_message.style.padding = "10px";
+
+            var text;
+            if (fname.length < 3) {
+                text = "Please Enter a valid First Name";
+                error_message.innerHTML = text;
+                return false;
+            }
+            if (lname.length < 3) {
+                text = "Please Enter a Valid Last Name";
+                error_message.innerHTML = text;
+                return false;
+            }
+            if (isNaN(phone) || phone.length != 10) {
+                text = "Please Enter valid Phone Number";
+                error_message.innerHTML = text;
+                return false;
+            }
+            if (email.indexOf("@") == -1 || email.length < 6) {
+                text = "Please Enter valid Email";
+                error_message.innerHTML = text;
+                return false;
+            }
+            if (address.length <= 140) {
+                text = "Please Enter More Than 140 Characters";
+                error_message.innerHTML = text;
+                return false;
+            }
+            alert("Form Submitted Successfully!");
+            return true;
+        }
+    </script>
     <script src="js/carousel.js"></script>
     <script src="js/selection.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    </script>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
