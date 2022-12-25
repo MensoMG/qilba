@@ -401,7 +401,7 @@ h6 {
 /* REVIEWS PAGE */
 .review__header {
     position: relative;
-    background-image: url("/images/temp.jpg");
+    background-image: url("/images/review-header.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -419,8 +419,8 @@ h6 {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-color: #ffffff;
-    opacity: 0.5;
+    background-color: #42403d;
+    opacity: 0.3;
 }
 
 .review__text {
@@ -586,11 +586,16 @@ h6 {
 }
 
 .blog-news__item_img {
-    background-image: url("/images/blog-img.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 340px;
+    width: 100%;
+}
+.blog-news__item_img > img {
+    object-fit: cover;
+    object-position: center; 
+    height: 100%;
     width: 100%;
 }
 
@@ -633,7 +638,10 @@ h6 {
     justify-content: space-evenly;
 }
 .about-top__img {
-    background-image: url("/images/temp.jpg");
+    height: 500px;
+    width: 400px;
+}
+.about-top__img > img {
     height: 500px;
     width: 400px;
 }

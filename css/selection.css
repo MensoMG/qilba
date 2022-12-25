@@ -29,15 +29,21 @@
     height: 100%;
     position: absolute;
     transition: left .4s cubic-bezier(.47, .13, .15, .89);
-    background-image: url("/images/temp.jpg");
+    /* background-image: url("/images/temp.jpg"); */
 }
-
+.slide > img {
+    height: 100%;
+    width: 100%;
+    z-index: -100;
+    position: absolute;
+}
+    
 .slide:nth-child(odd) {
-    margin-left: 1em;
+    margin-left: 0.5em;
 }
 
 .slide:nth-child(even) {
-    margin-right: 1em;
+    margin-right: 0.5em;
 }
 
 .selection__item {
@@ -46,7 +52,7 @@
     padding: 0 5px;
     position: absolute;
     right: 0;
-    background-color: rgba(150, 150, 150, .9);
+    background-color: rgba(29, 28, 28, 0.9);
 }
 
 .selection__content {

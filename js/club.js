@@ -1,15 +1,15 @@
-const OVERLAP = 0.25; // of width
-const ROTATION = 45; // degrees
-const DELAY = 250; // milliseconds - for various animations
-const SCALE = 1.7; // for when card flips to back
-const SWIPE = 75; // pixels - min swipe length
+const OVERLAP = 0.25; // ширина
+const ROTATION = 45; // градусы
+const DELAY = 250; // миллисукунды для различных анимаций
+const SCALE = 1.7; // для случая, когда карта переворачивается на другую сторону
+const SWIPE = 75; // пиксели - минимальная длина мазка
 
-// --- globals
+// --- глобыльные переменные
 
 var content = [ ...document.querySelectorAll('div.content')];
 var index = Math.floor(content.length / 2);
 
-// --- flips an item over
+// --- переворачивает элемент
 
 function action_flip(show) {
     let current = content[index];
@@ -31,7 +31,7 @@ function action_flip(show) {
     return change;
 }
 
-// --- move to previous item
+// --- двигает предыдущий элемент
 
 function action_prev() {
     if (index) {
@@ -40,7 +40,7 @@ function action_prev() {
     }
 }
 
-// --- move to next item
+// --- перемещает к следующему элементу
 
 function action_next() {
     if (content.length > (index + 1)) {
@@ -49,7 +49,7 @@ function action_next() {
     }
 }
 
-// --- jump to specified item
+// --- переход к указанному элементу
 
 function action_goto(i) {
     if (index !== i) {
@@ -58,7 +58,7 @@ function action_goto(i) {
     }
 }
 
-// --- reflow the items
+// --- изменить цвет элементов
 
 function action_flow() {
     content.forEach((c, i) =>  {
@@ -89,7 +89,7 @@ function action_flow() {
     setTimeout (() => { content[index].classList.add ('current') }, DELAY);
 }
 
-// --- state management
+// --- государственное управление
 
 function state(event, context) {
 
@@ -118,7 +118,7 @@ function state(event, context) {
     }
 }
 
-// --- event management
+// --- управление событиями
 
 function events() {
 
@@ -153,7 +153,7 @@ function events() {
     addEventListener('resize', (event) => { action_flow() });
 }
 
-// --- initialisation 
+// --- инициализация 
 
 function init() {
 

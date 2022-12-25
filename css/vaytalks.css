@@ -30,9 +30,15 @@
 }
 
 .triple-box__img {
-    background-image: url("/images/temp.jpg");
+    
     width: 250px;
     height: 250px;
+}
+.triple-box__img > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .triple-box__img:nth-child(1) {
@@ -62,7 +68,10 @@
 }
 
 .big-image>div {
-    background-image: url("/images/temp.jpg");
+    background-image: url("/images/chap.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 400px;
     width: 600px;
     margin: 1em 0;
